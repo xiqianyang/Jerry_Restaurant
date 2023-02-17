@@ -13,7 +13,7 @@ function Login() {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-      // Redirect to the user's profile page or some other pagess
+      // Redirect to the user's profile page or some other page
     } else {
       setLoginError('Invalid username or password');
     }
