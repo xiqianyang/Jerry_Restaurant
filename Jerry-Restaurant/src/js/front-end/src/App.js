@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/Login" element={<Login/>}>
+        <Route exact path="/" element={<Login/>}>
         </Route>
         <Route path="/main" element={<Main/>}>
         </Route>
