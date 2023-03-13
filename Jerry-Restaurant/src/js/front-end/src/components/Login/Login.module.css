@@ -1,0 +1,54 @@
+.login{
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    height: 1200px;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+/* Constraint When the screen is larger than 750px, 
+the html font size will not change */
+@media screen and (min-width: 750px) {
+      .login{
+         font-size: 37.5px !important;
+      }
+}
+
+.welcome{
+ /* height: 2.1333rem;
+ text-align: center;
+ line-height: 10.1333rem;
+ font-size: 1.25rem;
+ color:#1c1c1c;
+ font-weight: bold; */
+ position :fixed;
+ left:25%;
+
+}
+.login_text{
+    /* font-weight: bold;
+    font-size: 1.20rem;
+    text-align: center;
+    line-height: 10.1333rem */
+}
+.login_button{
+    /* text-align: center;
+    background-color: #FFD700;
+    display:flex;
+    margin:0 auto;
+    width: 10.0rem;
+    height:2.4rem; */
+}
+.login_click{
+/* display: flex;
+line-height: 0.0rem;
+color: black;
+margin-left: 2.7rem; */
+
+}
+.or{
+    /* display: flex;
+    line-height: 3rem;
+     */
+}
