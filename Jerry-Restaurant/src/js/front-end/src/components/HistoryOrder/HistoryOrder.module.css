@@ -1,0 +1,58 @@
+.divBox{
+    width: 100%;
+    background-color: #FFD700;
+    margin: 0;
+    height: 5rem;
+}
+.historyOrder{
+   
+    width: 100%;
+    margin-top: 3rem;
+    height: 10rem;
+    padding: 1rem;
+    border: 1px black solid;
+}
+.inner{
+    margin-top: 2.5rem;
+    margin-bottom: -1rem;
+    margin-left: 2rem;
+}
+.title{
+    margin: 0;
+    width: 3rem;
+    margin-left: 2rem;
+}
+.img1{
+    width: 6rem;
+    height:6rem;
+
+    border: 1px #f2f2f2 solid;
+}
+.date{
+    display: flex;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+  
+    height: 8rem;
+    top:0;
+
+}
+.page{
+   
+    top:0;
+    
+    margin-left: 3rem;
+    margin-top: -1rem;
+}
+.total{
+    margin-left: 17rem;
+    margin-bottom: 0.5rem;
+}
+.button{
+    background-color: #FFD700;
+    border-radius: 10px;
+    width:8rem;
+    height:2rem;
+    margin-left: 15rem;
+    margin-bottom: 1rem;
+} 

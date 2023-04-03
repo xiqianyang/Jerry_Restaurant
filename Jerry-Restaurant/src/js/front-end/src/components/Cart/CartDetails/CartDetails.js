@@ -4,17 +4,17 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTrash} from "@fortawesome/free-solid-svg-icons";
 import classes from './CartDetails.module.css';
 import CartContext from "../../../store/cart-context";
-import Meal from "../../Meals/Meal/Meal";
+import Food from '../../OrderFood/Food/Food';
 import Confirm from "../../UI/Confirm/Confirm";
 
 const CartDetails = () => {
 
     const ctx = useContext(CartContext);
 
-    // 设置state控制确认框的显示
+    // Set the state to control the display of the confirmation box
     const [showConfirm, setShowConfirm] = useState(false);
 
-    // 添加函数显示确认窗口
+    // Add function to show confirmation window
     const showConfirmHandler = () => {
         setShowConfirm(true);
     };
@@ -25,39 +25,36 @@ const CartDetails = () => {
     };
 
     const okHandler = () => {
-        // 清空购物车
+        // Clear shopping Cart
         ctx.clearCart();
     };
 
     return (
-        <Backdrop>
-
-            {showConfirm && <Confirm
-                onCancel={cancelHandler}
+        <Backdrop >
+                {showConfirm && <Confirm
+                 onCancel={cancelHandler}
                 onOk={okHandler}
-                confirmText={'确认清空购物车吗？'}/>}
-
-            <div
-                className={classes.CartDetails}
-                onClick={e => e.stopPropagation()}
-            >
+                 confirmText={'Confirm to clear Cart?'}/>}
+            <div className={classes.CartDetails} onClick={e => e.stopPropagation()}>
                 <header className={classes.Header}>
-                    <h2 className={classes.Title}>餐品详情</h2>
+
+
+                    <h2 className={classes.Title}>Food details</h2>
                     <div
-                        onClick={showConfirmHandler}
-                        className={classes.Clear}>
-                        <FontAwesomeIcon icon={faTrash}/>
-                        <span>清空购物车</span>
+                    onClick={showConfirmHandler}
+                      className={classes.Clear}>
+                        <FontAwesomeIcon icon = {faTrash}/>
+                      <span>  Clear shopping Cart!</span>
                     </div>
                 </header>
-
-                <div className={classes.MealList}>
-                    {
-                        ctx.items.map(item =>
-                            <Meal noDesc key={item.id} meal={item}/>
-                        )
-                    }
-                </div>
+                
+                 <div className={classes.MealList}>
+                     {
+                         ctx.items.map(item =>
+                             <Food noDesc key={item.id} Food={item}/>
+                         )
+                     }
+                  </div>
             </div>
         </Backdrop>
     );

@@ -1,0 +1,20 @@
+.OrderFood{
+    position: absolute;
+    top: 4.5rem;
+    bottom: 0;
+    overflow: auto;
+    padding-bottom:9.5rem;
+}
+.Lo{
+    color:#FFD700 ;
+    font-size: 1rem;
+    margin-top: -2.75rem;
+    font-size: 1.2rem;
+    position: fixed;
+}
+.back{
+    font-size: 1.2rem;
+    margin-top: -1.5rem;
+    text-decoration:none;
+    color:#FFD700
+}

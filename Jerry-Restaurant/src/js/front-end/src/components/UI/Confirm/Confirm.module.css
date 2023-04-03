@@ -4,8 +4,8 @@
 
 .Confirm{
     position: absolute;
-    width: 700rem;
-    height: 300rem;
+    width: 23rem;
+    height: 10rem;
     border-radius: 20px;
     background-color: #fff;
     top: 0;
@@ -20,20 +20,20 @@
 }
 
 .ConfirmText{
-    font-size: 38rem;
+    font-size: 1.3rem;
 }
 
 .Cancel, .Ok{
     border: 1px solid #ccc;
     background-color: #fff;
-    width: 180rem;
-    height: 60rem;
+    width: 6rem;
+    height: 2rem;
     border-radius: 20px;
-    font-size: 28rem;
+    font-size: 1rem;
 }
 
 .Ok{
     background-color: #FCBF49;
     border: none;
-    margin-left: 50rem;
+    margin-left: 3rem;
 }

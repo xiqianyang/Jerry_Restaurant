@@ -4,6 +4,8 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import classes from './FilterMeals.module.css';
 
 const FilterMeals = (props) => {
+    
+    // const[keyword,setkeyword]
 
     const inputChangeHandler = e => {
         const keyword = e.target.value.trim();
@@ -17,7 +19,7 @@ const FilterMeals = (props) => {
                     onChange={inputChangeHandler}
                     className={classes.SearchInput}
                     type="text"
-                    placeholder={"请输入关键字"}/>
+                    placeholder={"Please type keywords"}/>
                 <FontAwesomeIcon
                     className={classes.SearchIcon}
                     icon={faSearch}/>

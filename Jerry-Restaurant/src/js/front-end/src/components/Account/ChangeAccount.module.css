@@ -1,0 +1,22 @@
+.input{
+    margin-top: 20rem;
+
+}
+.passwordContext{
+    margin-left: 3rem;
+}
+.Password{
+   margin-top: 2rem;
+   margin-left: -4rem;
+}
+.confirmPasswordContext{
+    margin-left: 3rem;
+}
+.confirmPassword{
+    margin-top: 2rem;
+   margin-left: -7.5rem;
+   width: 19rem;
+}
+.button{
+    margin-left:3rem;
+}

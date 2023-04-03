@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.takeaway.dao.RestaurantMapper">
+
+    <resultMap id="RestaurantBaseResultMap" type="com.example.takeaway.entity.Restaurant" >
+        <result column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="des" property="des" />
+        <result column="img" property="img" />
+        <result column="price" property="price" />
+        <result column="deliver_time" property="deliverTime" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <sql id="Restaurant_Base_Column_List">
+        id,
+        title,
+        des,
+        img,
+        price,
+        deliver_time,
+        create_time
+    </sql>
+
+    <resultMap id="FoodBaseResultMap" type="com.example.takeaway.entity.Food" >
+        <result column="id" property="id" />
+        <result column="rid" property="rid" />
+        <result column="title" property="title" />
+        <result column="des" property="des" />
+        <result column="img" property="img" />
+        <result column="price" property="price" />
+        <result column="kcal" property="kcal" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <sql id="Food_Base_Column_List">
+        id,
+        rid,
+        title,
+        des,
+        img,
+        price,
+        kcal,
+        create_time
+    </sql>
+
+
+
+    <select id="pageList" resultMap="RestaurantBaseResultMap">
+        SELECT <include refid="Restaurant_Base_Column_List" />
+        FROM restaurants;
+    </select>
+
+    <select id="foodList" resultMap="FoodBaseResultMap">
+        SELECT <include refid="Food_Base_Column_List" />
+        FROM food
+        WHERE rid = #{id};
+    </select>
+
+    <insert id="checkout" useGeneratedKeys="true" keyColumn="id" keyProperty="id" parameterType="com.example.takeaway.entity.Order">
+        INSERT INTO ordertable
+        (rid,uid,create_date, credit,total_kcal,total_price)
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="null != rid and '' != rid">
+                #{rid},
+            </if>
+            <if test="null != uid and '' != uid">
+                #{uid},
+            </if>
+            #{createDate},
+            <if test="null != credit and '' != credit">
+                #{credit},
+            </if>
+            <if test="null != totalKcal and '' != totalKcal">
+                #{totalKcal},
+            </if>
+            <if test="null != totalPrice and '' != totalPrice">
+                #{totalPrice}
+            </if>
+
+        </trim>
+    </insert>
+
+    <resultMap id="HistoryOrderBaseResultMap" type="com.example.takeaway.entity.HistoryOrder" >
+        <result column="id" property="id" />
+        <result column="rid" property="rid" />
+        <result column="uid" property="uid" />
+        <result column="create_date" property="createDate" />
+        <result column="credit" property="credit" />
+        <result column="img" property="img" />
+        <result column="title" property="title" />
+        <result column="total_kcal" property="totalKcal" />
+        <result column="total_price" property="totalPrice" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <sql id="History_Order_Base_Column_List">
+        id,
+        rid,
+        uid,
+        img,
+        title,
+        create_date,
+        credit,
+        total_kcal,
+        total_price,
+        create_time
+    </sql>
+
+    <select id="getOrders" resultMap="HistoryOrderBaseResultMap">
+        SELECT
+        ordertable.id,
+        ordertable.rid,
+        ordertable.uid,
+        restaurants.img,
+        restaurants.title,
+        ordertable.create_date,
+        ordertable.credit,
+        ordertable.total_kcal,
+        ordertable.total_price,
+        ordertable.create_time
+        FROM ordertable LEFT JOIN restaurants ON ordertable.rid = restaurants.id
+        WHERE ordertable.uid = #{id}
+    </select>
+
+</mapper>

@@ -1,9 +1,9 @@
-.CheckoutItem{
+ .CheckoutItem{
     display: flex;
 }
 
 .MealImg{
-    width: 140rem;
+    width: 6rem;
 }
 
 .MealImg img{
@@ -12,14 +12,14 @@
 
 .Desc{
     flex: auto;
-    margin-left: 20rem;
+    margin-left: 0.6rem;
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
 }
 
 .Title{
-    font-size: 24rem;
+    font-size: 1.1rem;
 }
 
 .PriceOuter{
@@ -28,12 +28,21 @@
 }
 
 .Price{
-    font-size: 26rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .Price::before{
-    content: '￥';
+    content: '€';
     font-weight: normal;
-    font-size: 24rem;
+    font-size: 1rem;
+} 
+.Kcal{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
+.Kcal::after{
+    content: 'kcal';
+    font-weight: normal;
+    font-size: 1rem;
+} 

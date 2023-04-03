@@ -1,26 +1,41 @@
 import { Button, Form, Input } from 'antd';
-import "./Login.module.css";
-import { Link }from "react-router-dom";
+import style from "./Login.module.css";
+import { Link, useNavigate }from "react-router-dom";
+import UserService from '../../services/UserService';
 
 
 
-const onFinish = (values) => {
-  console.log('Success:', values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log('Failed:', errorInfo);
-}; 
+const Login = () => {
+  
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  }; 
+  const navigate = useNavigate();
+  
+  
+  const onFinish = (values) => {
+    UserService.login(values).then((response)=>{
+    console.log('login response:',response );
+    const loginCode = response.data;
+    if(loginCode === -1){
+      alert("this user does not exist")
+    }else if(loginCode === 0){
+      alert("the password is not right");
+    }else{
+      alert("login successfully!");
+      localStorage.setItem("userId", loginCode);
 
-const Login = () => (
+      navigate("/SpecialOffer")
+    }
+    })
+  };
 
-    // const navigate = useNavigate();
-
-  <return>
-
-  <div  className='login'>
+  return (
+    
+    <div  className={style.login}>
  
   <Form
-    name="basic"
+   
     labelCol={{
       span: 8,
     }}
@@ -37,17 +52,21 @@ const Login = () => (
     onFinishFailed={onFinishFailed}
     autoComplete="off"
   >
-    <span className='welcome'>Welcome to Jerry's Restaurant</span>
-    <p className='login_text'>Login</p>
+    <span className={style.welcome}>Welcome to Jerry's Restaurant</span>
+    <p className={style.login_text}>Login</p>
+    <div className={style.typeInput}>
     <Form.Item
       label="Email"
-       name="username"
+       name="email"
       rules={[
         {
-          required: true,
-         
-          message: 'Please input your email!',
+          type: 'email',
+          message: 'The input is not valid E-mail!',
         },
+        {
+          required: true,
+          message: 'Please input your email!',
+        }
       ]}
     >
       
@@ -70,16 +89,17 @@ const Login = () => (
       placeholder='Type your password here!'
       />
     </Form.Item>
-    <div>
     </div>
-      <Button type="primary" htmlType="submit" className='login_button'>
-        <Link to="/SpecialOffer" className='login_click'>Login</Link> 
+      <Button htmlType="submit" className={style.login_button}>Login
+        {/* <Link to="/SpecialOffer" className={style.login_click}>Login</Link>  */}
       </Button>
-      <span className='or'>Or </span>      
-        <Link to="/Signup">Sign up!</Link>
+      <div>
+      <span className={style.or}>Or </span>      
+        <Link to="/Signup" className={style.SignUpUrl}>Sign up!</Link>
+      </div>
       </Form>
   </div>
-  </return>
-);
+  )
+};
 
 export default Login;

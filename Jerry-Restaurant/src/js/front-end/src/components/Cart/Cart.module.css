@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 700rem;
-    height: 80rem;
+    width: 22rem;
+    height: 3rem;
     background-color: #333;
     border-radius: 20px;
-    bottom: 30rem;
+    bottom:6rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -14,36 +14,46 @@
 }
 
 .Icon{
-    width: 80rem;
+    width: 3rem;
     position: absolute;
-    bottom:-6rem;
+    bottom:0rem;
 }
 
 .Icon img{
     width: 100%;
 }
 
-.TotalAmount{
+.TotalAccount{
     position: absolute;
-    width: 36rem;
-    height: 36rem;
-    line-height: 36rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height:1.5rem;
     text-align: center;
     background-color: #f00;
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
-    font-size: 22rem;
-    right: -10rem;
+    font-size: 1rem;
+    left: 1.9rem;
+    bottom: 2.8rem;
+
 }
 
 .Price, .NoMeal{
     display: flex;
     align-items: center;
-    margin-left: 120rem;
+    margin-left: 4rem;
     color: #fff;
     font-weight: bold;
-    font-size: 36rem;
+    font-size: 1.2rem;
+}
+.Kcal{
+    display: flex;
+    align-items: center;
+    /* margin-left: 4rem; */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .NoMeal{
@@ -51,16 +61,16 @@
 }
 
 .Price::before{
-    content: '￥';
-    font-size: 24rem;
+    content: '€';
+    font-size: 1rem;
 }
 
 .Button{
     border: none;
     background-color: #FCBF49;
-    width: 200rem;
+    width: 7rem;
     border-radius: 20px;
-    font-size: 36rem;
+    font-size: 1rem;
 }
 
 .Disabled{

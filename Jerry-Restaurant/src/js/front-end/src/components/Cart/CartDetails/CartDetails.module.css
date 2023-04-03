@@ -2,11 +2,12 @@
     position: absolute;
     display: flex;
     flex-flow: column;
-    width: 750rem;
-    max-height: 1200rem;
+    width: 26.2rem;
+    max-height: 40rem;
+    min-height:25rem;
     background-color: #fff;
     bottom: 0;
-    padding-bottom: 120rem;
+    /* padding-bottom: 40rem; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -14,22 +15,22 @@
 .Header{
     display: flex;
     justify-content: space-between;
-    padding: 30rem;
+    padding: 2rem;
 }
 
 .Title{
     font-weight: bold;
-    font-size: 28rem;
+    font-size: 1rem;
     margin: 0;
 }
 
 .Clear{
     color: #aaa;
-    font-size: 24rem;
+    font-size: 1rem;
 }
 
 .Clear span{
-    margin-left: 12rem;
+    margin-left: 1rem;
 }
 
 .MealList{

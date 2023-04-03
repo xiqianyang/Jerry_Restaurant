@@ -1,29 +1,22 @@
 .Title1{
     
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-    margin-top: 2.3rem;
+    margin-top: 8rem;
     
 }
 
 .Skip{
     position: absolute;
-    color: yellow;
-    top:1rem;
+    color: #FFD700;
+    top:2rem;
     right:2rem;
     text-decoration:none;
 }
 .RO{
     position: absolute;
-    color: yellow;
-    top:1.15rem;
+    color: #FFD700;
+    top:2rem;
     right:1rem;
-}
-
-.SpecialOffer{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    overflow: auto;
 }

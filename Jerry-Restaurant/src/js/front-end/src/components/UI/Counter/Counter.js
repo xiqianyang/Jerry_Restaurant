@@ -1,47 +1,45 @@
-// import React, {useContext} from 'react';
-// import classes from './Counter.module.css';
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-// import {faPlus, faMinus} from "@fortawesome/free-solid-svg-icons";
-// import CartContext from "../../../store/cart-context";
+import React, {useContext} from 'react';
+import classes from './Counter.module.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlus, faMinus} from "@fortawesome/free-solid-svg-icons";
+import CartContext from "../../../store/cart-context";
 
-// // 计数器的组件
-// const Counter = (props) => {
+// Components of the counter
+const Counter = (props) => {
 
-//     // 获取cartContext
-//     const ctx = useContext(CartContext);
+    // getcartContext
+    const ctx = useContext(CartContext);
 
 
-//     // 添加购物车的函数
-//     const addButtonHandler = () => {
-//         ctx.addItem(props.meal);
-//     };
+    // add cart function
+    const addButtonHandler = () => {
+        ctx.addItem(props.Food);
+    };
 
-//     // 删除食物的函数
-//     const subButtonHandler = () => {
-//         ctx.removeItem(props.meal);
-//     };
+    // function of delete food
+    const subButtonHandler = () => {
+        ctx.removeItem(props.Food);
+    };
 
-//     return (
-//         <div className={classes.Counter}>
+    return (    
+        <div className={classes.Counter}> 
+        {
+            (props.Food.amount && props.Food.amount !== 0 ) ?
+            (
+            <>
+            <button onClick={subButtonHandler} className={classes.Sub}><FontAwesomeIcon icon={faMinus}/></button>
+             <span className={classes.count}>{props.Food.amount}</span>
+             </>
+            ) : null
+        }
+        
+       
+        <button 
+        onClick={addButtonHandler}
+        className={classes.Add}>
+             <FontAwesomeIcon icon={faPlus}/></button>
+        </div>
+    );
+};
 
-//             {
-//                 (props.meal.amount && props.meal.amount !== 0) ? (
-//                     <>
-//                         <button
-//                             onClick={subButtonHandler}
-//                             className={classes.Sub}><FontAwesomeIcon icon={faMinus}/></button>
-//                         <span className={classes.count}>{props.meal.amount}</span>
-//                     </>
-//                 ) : null
-//             }
-
-//             <button
-//                 onClick={addButtonHandler}
-//                 className={classes.Add}>
-//                 <FontAwesomeIcon icon={faPlus}/>
-//             </button>
-//         </div>
-//     );
-// };
-
-// export default Counter;
+export default Counter;

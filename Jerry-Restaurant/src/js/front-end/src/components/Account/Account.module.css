@@ -1,0 +1,53 @@
+.userHome{
+ display: flex;
+margin-left: 3rem;
+margin-top: 6rem;
+
+}
+.UserOutlined{
+    
+    margin-top: 3rem;
+    margin-left:1rem;
+    font-size: 1.5rem;
+}
+.userHome{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+.totalBox{
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.pointSystem{
+    
+}
+.EditOutlined{
+   font-size: 2rem;
+   margin-left: 2rem;
+   margin-top: 1.5rem;
+   color: #FFD700;
+}
+.point{
+   display: flex;
+   margin-top: 1rem;
+   margin-left: 9rem;
+}
+.GiftOutlined{
+    font-size: 2rem;
+    
+    margin-top: -5rem;
+    color: #FFD700;
+}
+.points{
+    font-size: 2rem;
+    margin-top: -5rem;
+    margin-left: 2rem;
+}
+.CurPoint{
+  
+    margin-left: 8.5rem;
+    margin-top: -2.1rem;
+
+}

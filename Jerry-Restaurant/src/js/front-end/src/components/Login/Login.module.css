@@ -1,14 +1,14 @@
 .login{
-    min-width: 320px;
-    max-width: 750px;
+    min-width: 414px;
+    max-width: 896px;
     margin: 0 auto;
-    height: 1200px;
-    /* flex-direction: column;
+    height: 56rem;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 /* Constraint When the screen is larger than 750px, 
-the html font size will not change */
+the html font size will not change  */
 @media screen and (min-width: 750px) {
       .login{
          font-size: 37.5px !important;
@@ -16,39 +16,46 @@ the html font size will not change */
 }
 
 .welcome{
- /* height: 2.1333rem;
+ position: relative;
  text-align: center;
- line-height: 10.1333rem;
+ line-height: 13rem;
  font-size: 1.25rem;
  color:#1c1c1c;
- font-weight: bold; */
- position :fixed;
- left:25%;
+ font-weight: bold;
+ left: 3.5rem; 
 
 }
 .login_text{
-    /* font-weight: bold;
+    font-weight: bold;
     font-size: 1.20rem;
     text-align: center;
-    line-height: 10.1333rem */
+    margin: 0;
 }
 .login_button{
-    /* text-align: center;
+    text-align: center;
     background-color: #FFD700;
     display:flex;
     margin:0 auto;
     width: 10.0rem;
-    height:2.4rem; */
+    height:2.4rem;
+}
+.typeInput{
+    width:80%;
+    margin-left: 3rem;
 }
 .login_click{
-/* display: flex;
-line-height: 0.0rem;
+display: flex;
+line-height: 1.5rem;
 color: black;
-margin-left: 2.7rem; */
+margin-left: 2.7rem;
 
 }
 .or{
-    /* display: flex;
     line-height: 3rem;
-     */
+    margin-left: 10rem;
+    
+    
+}
+.SignUpUrl{
+    color: #FFD700;
 }

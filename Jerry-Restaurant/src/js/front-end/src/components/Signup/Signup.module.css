@@ -1,0 +1,39 @@
+.SignUp{
+    width:90%
+}
+.GoBack{
+    position: absolute;
+    color:#FFD700;
+    top:1rem;
+    left:2rem;
+    text-decoration:none;
+    font-size: 1.2rem;
+}
+.LO{
+    position: absolute;
+    color: #FFD700;
+    top:1.15rem;
+    left:1rem;
+}
+.Title{
+    margin-top: 5rem;
+    margin-left: 2.5rem;
+}
+.CA{
+    text-align: center;
+    margin-left: 1.4rem;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+}
+.Input{
+    margin-top: 2rem;
+    margin-left: 3rem;
+
+}
+.Button{
+    margin-top: 2rem;
+    margin-left: 4.7rem;
+    width: 10.0rem;
+    height:2.4rem;
+    background-color: #FFD700;
+}

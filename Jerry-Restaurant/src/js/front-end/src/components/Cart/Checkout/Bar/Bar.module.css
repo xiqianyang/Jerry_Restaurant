@@ -2,35 +2,33 @@
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 700rem;
-    height: 80rem;
+    width: 22rem;
+    height: 3rem;
     background-color: #333;
     border-radius: 20px;
-    bottom: 30rem;
+    bottom:5rem;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 9999;
 }
-
+.InTotal{
+    display: flex;
+    color: #fff;
+}
 .TotalPrice{
     display: flex;
     align-items: center;
-    margin-left: 60rem;
+    /* margin-left: 1rem; */
     color: #fff;
     font-weight: bold;
-    font-size: 36rem;
+    font-size: 1.2rem;
 }
-
-.TotalPrice::before{
-    content: '￥';
-    font-size: 24rem;
-}
-
 .Button{
     border: none;
     background-color: #FCBF49;
-    width: 200rem;
+    width: 7rem;
     border-radius: 20px;
-    font-size: 36rem;
+    font-size: 1rem;
+    height: 3rem;
 }

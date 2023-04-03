@@ -1,4 +1,5 @@
-.Offer{
+
+.Food{
     /*开启弹性盒*/
     display: flex;
     /*设置辅轴对齐方式*/
@@ -6,16 +7,19 @@
     /*设置外边距*/
     padding: 1rem;
     border-bottom: 1px #f2f2f2 solid;
-
+    margin-top: 0.5rem;
+    text-decoration: none;
 }
-
+.Link{
+    text-decoration: none;
+}
 .ImgBox{
-    width:10rem;
+    width:7rem;
 }
 
 
 img{
-    width: 100%;
+    width: 98%;
 }
 
 .DescBox{
@@ -32,23 +36,30 @@ img{
 .Desc{
     margin: 0;
     color: #bbb;
-    font-size: 12px;
-    /* padding-right: 40rem; */
+    font-size: 0.9rem;
+    padding-right: 2rem;
+    text-decoration: none;
 }
 
 .PriceWrap{
-    margin-top:1rem;
-    padding-right:10rem;
+    margin-top:0.5rem;
+    padding-right:1rem;
     display: flex;
     justify-content: space-between;
+}
+.Average_cost{
+    margin:0%;
 }
 
 .Price{
     font-weight: bold;
-    font-size: 18px;
+    /* font-size: 1.3rem; */
 }
 
 .Price::before{
-    content: '￥';
+    content: '€';
     font-size: 12px;
+}
+.Deliver_time{
+    margin:0%;
 }

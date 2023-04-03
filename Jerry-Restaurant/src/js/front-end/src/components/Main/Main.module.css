@@ -1,0 +1,57 @@
+.divBox{
+    width: 100%;
+    background-color: #FFD700;
+    margin: 0;
+    height: 5rem;
+}
+.BoxArea{
+    position:fixed;
+   display: flex;
+    width: 100%;
+    height: 7.5rem;
+    border-bottom: 1px solid #f2f2f2;
+    overflow-x: auto;
+	overflow-y: hidden;
+    justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+    background-color: white;
+}
+.Box1{
+    width:5rem;
+    /* background-color: #FFD700; */
+    height: 5rem;
+    padding: 1rem;
+    border:1px solid #f2f2f2;
+    /* margin-top: -1rem; */
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+    flex-shrink: 0;
+    border-radius: 0.4rem;
+    justify-content: space-around;
+}
+.BoxArea::-webkit-scrollbar {
+    width: 0;
+  }
+.img{
+    width: 6.5rem;
+    margin-left:-2rem;
+    margin-top:-2rem;
+}
+.title{
+  color: black;
+  margin-top: -0.8rem;
+  display: flex;
+  margin-left: -0.8rem;
+  margin-right: -1rem;
+  /* align-items: center; */
+
+
+}
+.RinFo{
+   margin-top: 6rem;
+    margin-bottom: 4rem;
+    /* background-color: aqua; */
+    overflow-x: auto;
+	overflow-y: hidden;
+}
