@@ -44,11 +44,14 @@ const Cart = () => {
     };
 
     return (
+        
         <div className={classes.Cart} onClick={toggleDetailsHandler}>
             {showCheckout && <Checkout onHide={hideCheckoutHandler}/>}
            {showDetails && <CartDetails/>}
         <div className={classes.Icon}>
         <img  src={iconImg} alt="icon"/>
+    {/* <img src={iconImg} alt= " Hamburger"/> */}
+
         {ctx.totalAmount === 0 ? null : <span className={classes.TotalAccount}>{ctx.totalAmount}</span>}
         </div>
              {ctx.totalAmount === 0 ? <p className={classes.NoMeal}>Choose your food!</p> :

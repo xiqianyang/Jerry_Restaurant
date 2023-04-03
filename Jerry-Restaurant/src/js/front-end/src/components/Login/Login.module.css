@@ -32,12 +32,12 @@ the html font size will not change  */
     margin: 0;
 }
 .login_button{
-    text-align: center;
+   text-align: center;
     background-color: #FFD700;
-    display:flex;
     margin:0 auto;
-    width: 10.0rem;
-    height:2.4rem;
+     width: 10.0rem;
+   height:2.4rem;
+   margin-left: 8rem;
 }
 .typeInput{
     width:80%;

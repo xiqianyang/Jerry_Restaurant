@@ -1,10 +1,9 @@
 import style from "./Main.module.css";
-import Footer from "../footer/footer";
+import Footer from "../footer/footer";   
 import FilterMeals from "../FilterMeals/FilterMeals";
 import React,{useState,useEffect} from 'react';
 import Offer from "../SpecialOffer/Offer/Offer";
 import RestaurantService from "../../services/RestaurantService"
-
 
 export default function Main() {
 
@@ -32,7 +31,9 @@ useEffect(() => {
 const filterHandler = (keyword) => {
   if(keyword === ""){
     setRestaurantData(filterData)
+
   }else{
+    setRestaurantData(filterData)
     const newRestaurantsData = filterData.filter(items => items.title.indexOf(keyword) !== -1);
     setRestaurantData(newRestaurantsData)
   }
@@ -40,8 +41,10 @@ const filterHandler = (keyword) => {
 } 
   return (
     <>
-    <div className={style.divBox}></div>
-    <FilterMeals onFilter={filterHandler}/>
+    <div className={style.divBox}>
+      <FilterMeals onFilter={filterHandler}/>
+    </div>
+  
     <div className={style.BoxArea}>
       <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>AllFood</p></div>
       <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>Salad</p></div>
@@ -50,6 +53,9 @@ const filterHandler = (keyword) => {
       <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>ChineseFood</p></div>
       <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>IndianFood</p></div>
     </div>
+
+    {/* <img src={"/images/largemealdeal1.png"} alt= " Hamburger"/> */}
+
    
     <div className={style.RinFo}>
     {RestaurantData.map(item =>

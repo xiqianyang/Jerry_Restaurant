@@ -8,20 +8,19 @@ import { LeftOutlined } from "@ant-design/icons";
 import { Link ,useParams }from "react-router-dom";
 import RestaurantService from "../../services/RestaurantService"
 
-const OrderFood = () => {
+const OrderFood = () =>{
 
   
   const [filterData , setfilterData] = useState([]); 
-    const restaurantId = useParams();
-    // console.log("OrderFood props", props.Offer.id);
+  const restaurantId = useParams();
 
   const [OrderFoodData , setOrderFoodData] = useState([]);
 
   useEffect(() => {
     const fetchData = async() => {
     const result = await RestaurantService.getFoodList(restaurantId.id);
-    // setfilterData(result.data)
     setOrderFoodData(result.data)
+    setfilterData(result.data)
     }
     fetchData();
   
@@ -43,9 +42,14 @@ const OrderFood = () => {
  
   // Create a function to filter meals
   const filterHandler = (keyword) => {
+    if(keyword === ""){
+      setOrderFoodData(filterData)
 
-    const newOrderFoodsData = OrderFoodData.filter(items => items.title.indexOf(keyword) !== -1);
-    setOrderFoodData(newOrderFoodsData)
+    }else{
+      const newOrderFoodsData = filterData.filter(items => items.title.indexOf(keyword) !== -1);
+      setOrderFoodData(newOrderFoodsData)
+    }
+    
   } 
 
   // Add items to cart
@@ -103,15 +107,17 @@ const OrderFood = () => {
 
   
   return (
-    
-    
+  <>
 <div className={classes.OrderFood}>
     <div className={classes.Lo}>
     <LeftOutlined/>
     <Link to="/Main" className={classes.back}>Back</Link>
     </div>
-    <FilterMeals  onFilter={filterHandler}/>
-    
+    <div className={classes.searchBar}>
+    <FilterMeals onFilter={filterHandler}/>
+ 
+    </div>
+    {/* <img src={"/images/3.png"} alt= " Hamburger"/> */}
   <CartContext.Provider value={{...cartData,addItem,removeItem,clearCart}}>
      
             {OrderFoodData.map(item =>
@@ -123,6 +129,7 @@ const OrderFood = () => {
             <Cart/> 
             </CartContext.Provider>
         </div>
+    </>
   );
 };
 

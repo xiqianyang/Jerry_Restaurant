@@ -27,9 +27,9 @@ const tailFormItemLayout = {
 const Signup = () => {
   
     const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-  }; 
+  // const onFinish = (values) => {
+  //   console.log('Received values of form: ', values);
+  // }; 
   
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
@@ -55,13 +55,12 @@ const Signup = () => {
     setUser({...user,[e.target.name]: value})
   }
   const saveUser = (e) => {
-    console.log("e",e)
     console.log("user",user)
-    e.preventDefault();
+    // e.preventDefault();
     UserService.saveUser(user).then((response) => {
       console.log(response);
       alert("User saved successfully!");
-      navigate("/login")
+      navigate("/")
     })
     .catch((error) => {
       alert("Failed to save user.");
@@ -82,14 +81,13 @@ const Signup = () => {
       {...formItemLayout}
       form={form}
       name="register"
-      onFinish={onFinish}
+      onFinish={saveUser}
       initialValues={{
         prefix: '353',
       }}
       scrollToFirstError
     >
   
-     
       <Form.Item
         name="email"
         label="E-mail"
@@ -167,11 +165,11 @@ const Signup = () => {
       <FormItem   label = "PostCode" >
         <Input name = "address" value= {user.address} onChange={(e) => handleChange(e)}/>
       </FormItem>
-      <Form.Item {...tailFormItemLayout} >
-        <Button  htmlType="submit"className={style.Button} onClick={saveUser} >
+      {/* <Form.Item {...tailFormItemLayout} > */}
+        <Button  htmlType="submit"className={style.Button} >
            Register
         </Button>
-      </Form.Item>
+      {/* </Form.Item> */}
 
 
     </Form>

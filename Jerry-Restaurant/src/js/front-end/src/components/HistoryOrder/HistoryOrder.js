@@ -1,8 +1,9 @@
-import React from 'react';
-
-import RestaurantService from "../../services/RestaurantService"
-import  { useState,useEffect} from 'react';
+import style from "./HistoryOrder.module.css"
+import Footer from "../footer/footer";   
+import  React,{ useState,useEffect} from 'react';
 import Order from "./Order/Order.js"
+import RestaurantService from "../../services/RestaurantService"
+
 
 const HistoryOrder = () => {
   
@@ -14,8 +15,6 @@ const HistoryOrder = () => {
     console.log("userId",userId)
     const fetchData = async() => {
     const result = await RestaurantService.getHistoryOrder(userId);
-    console.log("getHistoryOrder",result.data)
-    // setfilterData(result.data)
     setHistoryOrder(result.data)
     }
 
@@ -24,18 +23,16 @@ const HistoryOrder = () => {
   },[]); 
   return (
     <>
-    {/* <div className={style.allOrder}><p className={style.inner}>All orders here!</p></div> */}
+    <div className={style.allOrder}><p className={style.inner}>All orders here!</p></div>
 
-      {/* <div className={style.divBox}></div> */}
-      <>
+      <div className={style.divBox}></div>
       {historyOrder.map(item =>
                 <Order
                     key={item.id}
                     order={item}
                 />
             )}
-      </>
-   
+      <Footer/>
     </>
   )
 }

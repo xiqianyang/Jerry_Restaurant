@@ -47,9 +47,8 @@ const Bar = (props) => {
             <div className={classes.TotalPrice}>In total:€{props.totalPrice}</div>
             <div className={classes.TotalPrice}> {props.totalKcal}Kcal</div>
             
-            {/* <Link to = "">  */}
+          
            <button className={classes.Button} onClick ={click}>Pay now!</button>
-            {/* </Link> */}
             
         </div>
     );

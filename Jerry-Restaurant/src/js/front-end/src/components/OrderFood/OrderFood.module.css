@@ -18,3 +18,10 @@
     text-decoration:none;
     color:#FFD700
 }
+.searchBar{
+    display:flex;
+    justify-content:center;
+    padding-left:4rem;
+    padding-right:3rem;
+
+}

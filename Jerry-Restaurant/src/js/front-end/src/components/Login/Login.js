@@ -91,7 +91,6 @@ const Login = () => {
     </Form.Item>
     </div>
       <Button htmlType="submit" className={style.login_button}>Login
-        {/* <Link to="/SpecialOffer" className={style.login_click}>Login</Link>  */}
       </Button>
       <div>
       <span className={style.or}>Or </span>      

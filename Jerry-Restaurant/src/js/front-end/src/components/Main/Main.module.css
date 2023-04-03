@@ -3,6 +3,12 @@
     background-color: #FFD700;
     margin: 0;
     height: 5rem;
+    position:fixed;
+    margin-top: -6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 1; */
 }
 .BoxArea{
     position:fixed;
