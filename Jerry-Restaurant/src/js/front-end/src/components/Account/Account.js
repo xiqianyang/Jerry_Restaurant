@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Account = () => {
 
+
 const navigate = useNavigate();
 
 const [credit, setCredit] = useState(0);
@@ -43,7 +44,7 @@ useEffect(() => {
     values["id"]= uid
     //  call backend
     UserService.reset(values).then((response)=>{
-      //  0 succ 
+      //  0 success 
       //  1 failed
       const result =  response.data;
       if(result === 0){
@@ -61,6 +62,10 @@ useEffect(() => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+  const jump = () => {
+    message.info('Logout successfully ',1.5)
+    navigate("/");
+  }
 
   const [showPassword,setShowPassword] = useState(false);
   const showPasswordHandler =() => {
@@ -168,6 +173,17 @@ useEffect(() => {
   </Form>
 
       </Modal>
+      
+    <Form.Item
+      wrapperCol={{
+        offset: 8,
+        span: 16,
+      }}
+    >
+      <Button type="primary" htmlType="submit" className={style.Logout} onClick={jump}>
+       Logout
+      </Button>
+    </Form.Item>
     <Footer/>
     
     </>

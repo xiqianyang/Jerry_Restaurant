@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 
 const Offer = (props) => {
 
-  // ,state:{id:props.Offer.id}
 
   const id = props.Offer.id
   const linkurl = "/OrderFood/"+id;
   return (
-    <Link to = {linkurl} className={style.Link}>
+    <Link to = {linkurl} style={{ textDecoration:'none'}}>
     <div className={style.Food}>
         
     <div className={style.ImgBox}>

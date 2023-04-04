@@ -1,10 +1,10 @@
 
 .Food{
-    /*开启弹性盒*/
+  
     display: flex;
-    /*设置辅轴对齐方式*/
+  
     align-items: center;
-    /*设置外边距*/
+ 
     padding: 1rem;
     border-bottom: 1px #f2f2f2 solid;
     margin-top: 0.5rem;
@@ -31,6 +31,7 @@ img{
     font-size: 1.35rem;
     padding:1rem;
     margin: 0;
+    color: black;
 }
 
 .Desc{
@@ -39,6 +40,7 @@ img{
     font-size: 0.9rem;
     padding-right: 2rem;
     text-decoration: none;
+    color: black;
 }
 
 .PriceWrap{
@@ -46,14 +48,17 @@ img{
     padding-right:1rem;
     display: flex;
     justify-content: space-between;
+    color: black;
 }
 .Average_cost{
     margin:0%;
+    color: black;
 }
 
 .Price{
     font-weight: bold;
     /* font-size: 1.3rem; */
+    color: black;
 }
 
 .Price::before{
@@ -62,4 +67,5 @@ img{
 }
 .Deliver_time{
     margin:0%;
+    color: black;
 }

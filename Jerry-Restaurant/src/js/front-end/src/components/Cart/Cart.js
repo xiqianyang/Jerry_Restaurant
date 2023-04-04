@@ -8,7 +8,6 @@ const Cart = () => {
 
     const ctx = useContext(CartContext);
 
-
     // Add a state to set whether the details are displayed
     const [showDetails, setShowDetails] = useState(false);
     // Add a state to set the checkout page to show or hide
@@ -50,7 +49,6 @@ const Cart = () => {
            {showDetails && <CartDetails/>}
         <div className={classes.Icon}>
         <img  src={iconImg} alt="icon"/>
-    {/* <img src={iconImg} alt= " Hamburger"/> */}
 
         {ctx.totalAmount === 0 ? null : <span className={classes.TotalAccount}>{ctx.totalAmount}</span>}
         </div>

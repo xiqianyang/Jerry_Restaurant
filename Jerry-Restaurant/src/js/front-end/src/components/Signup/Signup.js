@@ -1,4 +1,4 @@
-import {Button,Form,Input,Select,} from 'antd';
+import {Button,Form,Input,Select,message} from 'antd';
 import { Link, useNavigate } from "react-router-dom";
 import style from "./Signup.module.css";
 import { LeftOutlined } from '@ant-design/icons';
@@ -59,11 +59,17 @@ const Signup = () => {
     // e.preventDefault();
     UserService.saveUser(user).then((response) => {
       console.log(response);
-      alert("User saved successfully!");
-      navigate("/")
+      const code = response.data;
+      if(code === -1){
+        message.info('the email have been registered',3)
+      }else{
+        message.info('User saved successfully',3)
+        navigate("/")
+      }
+     
     })
     .catch((error) => {
-      alert("Failed to save user.");
+      message.info('Failed to save user.',3)
       console.log(error);
     })
 
@@ -153,6 +159,19 @@ const Signup = () => {
             required: true,
             message: 'Please input your phone number!',
           },
+          ({getFieldValue}) => ({
+            validator(_, value) {
+              // console.log(value)
+              // const value = getFieldValue('phone');
+                if(value){
+                  if (value.length !== 10) {
+                    return Promise.reject(new Error('please input valid phone number!'));
+                  }
+                  return Promise.resolve();
+                }
+                return Promise.resolve();
+              },
+            }),
         ]}
       >
         <Input

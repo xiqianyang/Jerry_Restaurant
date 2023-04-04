@@ -1,4 +1,4 @@
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input ,message} from 'antd';
 import style from "./Login.module.css";
 import { Link, useNavigate }from "react-router-dom";
 import UserService from '../../services/UserService';
@@ -18,11 +18,11 @@ const Login = () => {
     console.log('login response:',response );
     const loginCode = response.data;
     if(loginCode === -1){
-      alert("this user does not exist")
+      message.info('This user does not exist',3)
     }else if(loginCode === 0){
-      alert("the password is not right");
+      message.info('The password is not right',3)
     }else{
-      alert("login successfully!");
+      message.info('login successfully',3)
       localStorage.setItem("userId", loginCode);
 
       navigate("/SpecialOffer")

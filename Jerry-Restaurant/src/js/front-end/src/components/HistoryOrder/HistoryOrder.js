@@ -3,6 +3,7 @@ import Footer from "../footer/footer";
 import  React,{ useState,useEffect} from 'react';
 import Order from "./Order/Order.js"
 import RestaurantService from "../../services/RestaurantService"
+import FilterMeals from "../FilterMeals/FilterMeals";
 
 
 const HistoryOrder = () => {
@@ -12,7 +13,7 @@ const HistoryOrder = () => {
 
   useEffect(() => {
     const userId =  localStorage.getItem("userId")
-    console.log("userId",userId)
+    // console.log("userId",userId)
     const fetchData = async() => {
     const result = await RestaurantService.getHistoryOrder(userId);
     setHistoryOrder(result.data)
@@ -22,10 +23,19 @@ const HistoryOrder = () => {
   
   },[]); 
   return (
-    <>
-    <div className={style.allOrder}><p className={style.inner}>All orders here!</p></div>
+    <>  
+    <div className={style.divBox}>
+         <FilterMeals />
+      
+     
+      </div>
+      
+      <p className={style.inner}>All orders here!</p>
+    
+    
+    
 
-      <div className={style.divBox}></div>
+
       {historyOrder.map(item =>
                 <Order
                     key={item.id}

@@ -111,13 +111,16 @@ const OrderFood = () =>{
 <div className={classes.OrderFood}>
     <div className={classes.Lo}>
     <LeftOutlined/>
-    <Link to="/Main" className={classes.back}>Back</Link>
+    <Link to="/Main" className={classes.back}>Back</Link> 
+      <FilterMeals onFilter={filterHandler}/>
     </div>
-    <div className={classes.searchBar}>
-    <FilterMeals onFilter={filterHandler}/>
+
  
-    </div>
-    {/* <img src={"/images/3.png"} alt= " Hamburger"/> */}
+
+ 
+ 
+ 
+
   <CartContext.Provider value={{...cartData,addItem,removeItem,clearCart}}>
      
             {OrderFoodData.map(item =>

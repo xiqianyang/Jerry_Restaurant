@@ -3,7 +3,11 @@
     background-color: #FFD700;
     margin: 0;
     height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .historyOrder{
    
     width: 100%;
@@ -14,7 +18,7 @@
 }
 .inner{
     margin-top: 2.5rem;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
     margin-left: 2rem;
 }
 .title{

@@ -46,17 +46,13 @@ const filterHandler = (keyword) => {
     </div>
   
     <div className={style.BoxArea}>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>AllFood</p></div>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>Salad</p></div>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>Burger</p></div>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>Pizza</p></div>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>ChineseFood</p></div>
-      <div className={style.Box1}><img src="images/1.png" alt="a" className={style.img}></img><p className={style.title}>IndianFood</p></div>
+      <div className={style.Box1}><img src="images/allfood.png" alt="a" className={style.salad}></img><p className={style.saladText}>AllFood</p></div>
+      <div className={style.Box1}><img src="images/salad.png" alt="a" className={style.salad}></img><p className={style.saladText}>Salad</p></div>
+      <div className={style.Box1}><img src="images/burger1.png" alt="a" className={style.salad}></img><p className={style.saladText}>Burger</p></div>
+      <div className={style.Box1}><img src="images/pizza.png" alt="a" className={style.salad}></img><p className={style.saladText}>Pizza</p></div>
+      <div className={style.Box1}><img src="images/chinese.png" alt="a" className={style.salad}></img><p className={style.saladText}>ChineseFood</p></div>
+      <div className={style.Box1}><img src="images/India.png" alt="a" className={style.salad}></img><p className={style.saladText}>IndianFood</p></div>
     </div>
-
-    {/* <img src={"/images/largemealdeal1.png"} alt= " Hamburger"/> */}
-
-   
     <div className={style.RinFo}>
     {RestaurantData.map(item =>
                <Offer 

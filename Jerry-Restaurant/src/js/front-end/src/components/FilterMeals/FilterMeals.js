@@ -10,27 +10,27 @@ const FilterMeals = (props) => {
     
     // const[keyword,setkeyword]
 
-    const inputChangeHandler = e => {
+    // const inputChangeHandler = e => {
         
-    };
+    // };
 
-    const onSearch = (value) =>{
-        const keyword = value.trim();
-        props.onFilter(keyword);
-    }
+    // const onSearch = (value) =>{
+    //     const keyword = value.trim();
+    //     props.onFilter(keyword);
+    // }
 
     const onChange = (e) =>{
         const keyword = e.target.value.trim();
         props.onFilter(keyword);
-        console.log("keyword",keyword)
+        // console.log("keyword",keyword)
 
     }
 
     return (
         <>
         <Input
-            placeholder="input search text"
-            onSearch={onSearch}
+            placeholder="Type keywords here!"
+            // onSearch={onSearch}
             onChange={onChange}
             style={{
                 width: 300,

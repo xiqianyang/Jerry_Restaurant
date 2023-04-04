@@ -15,7 +15,7 @@ const Bar = (props) => {
         param["rid"] = ctx.items[0].rid;
         
         const items = ctx.items
-        console.log("ctx.items",items)
+        // console.log("ctx.items",items)
 
         //  calculate credit
         let credit = 0;

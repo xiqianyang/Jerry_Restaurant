@@ -3,12 +3,11 @@
     background-color: #FFD700;
     margin: 0;
     height: 5rem;
-    position:fixed;
-    margin-top: -6rem;
+    /* position:fixed; */
+    margin-top: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* opacity: 1; */
 }
 .BoxArea{
     position:fixed;
@@ -26,7 +25,7 @@
 .Box1{
     width:5rem;
     /* background-color: #FFD700; */
-    height: 5rem;
+    height: 5.5rem;
     padding: 1rem;
     border:1px solid #f2f2f2;
     /* margin-top: -1rem; */
@@ -39,25 +38,26 @@
 .BoxArea::-webkit-scrollbar {
     width: 0;
   }
-.img{
-    width: 6.5rem;
-    margin-left:-2rem;
-    margin-top:-2rem;
+.salad{
+    width:5rem;
+    height:5rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
 }
 .title{
   color: black;
-  margin-top: -0.8rem;
-  display: flex;
-  margin-left: -0.8rem;
-  margin-right: -1rem;
+  margin-top: 1rem;
+  /* display: flex; */
+  /* margin-left: -0.8rem; */
+  /* margin-right: -1rem; */
   /* align-items: center; */
 
 
 }
+.saladText{
+    margin-top: -0.2rem;
+}
 .RinFo{
    margin-top: 6rem;
     margin-bottom: 4rem;
-    /* background-color: aqua; */
-    overflow-x: auto;
-	overflow-y: hidden;
 }
